@@ -5,10 +5,12 @@ const keys = document.querySelectorAll('.key');
 const whiteKeys = document.querySelectorAll('.key.white');
 const blackKeys = document.querySelectorAll('.key.black');
 
+//Play piano with mouse click
 keys.forEach(key => {
     key.addEventListener('click', () => playNote(key));
 })
 
+//Play piano with keyboard
 document.addEventListener('keydown', e => {
     if (e.repeat) return
     const key = e.key;
